@@ -1,0 +1,143 @@
+@import "../../styles/rwd";
+
+.first-batch {
+  &-comp {
+    min-height: 100vh;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background: url("../../assets/imgs/nftExplain/bg.jpeg") no-repeat center;
+    background-size: cover;
+    position: relative;
+  }
+}
+
+.first-batch-comp .first-batch-collection .slideshow-comp {
+  &-slider {
+    height: 200px;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;;
+  }
+
+  &-track {
+    display: flex;
+    animation: sliderScrollRightToLeft 40s linear infinite;
+  }
+
+  &-slide {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+
+    img {
+      width: 100%;
+      transition: .1s;
+      border-radius: 10px;
+    }
+  }
+}
+
+.first-batch-container {
+  margin-top: 24px;
+  min-height: calc(100vh - 200px - 48px - 24px);
+
+  .first-batch-title {
+    position: relative;
+    margin-bottom: 24px;
+
+    .title {
+      z-index: 1;
+      font-size: 30px;
+      color: #ffffff;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    &:after {
+      content: "";
+      width: 200px;
+      border-bottom: 5px solid #ffffff;
+      position: absolute;
+      left: 50%;
+      bottom: -12px;
+      transform: translateX(-50%);
+    }
+  }
+
+  .first-batch-content {
+    z-index: 1;
+    margin-top: 48px;
+
+    .content-items {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 12px;
+
+      .item {
+        background-color: rgba(0, 0, 0, .6);
+        padding: 12px;
+        transition: .2s linear;
+
+        .desc {
+          font-size: 16px;
+          line-height: 25px;
+          font-weight: 600;
+          color: #ffffff;
+          transition: .2s linear;
+        }
+
+        &:hover {
+          background-color: #ffffff;
+
+          .desc {
+            color: #000000;
+          }
+        }
+      }
+
+      @include mobile {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .footer-content {
+      z-index: 1;
+
+      .desc {
+        font-size: 16px;
+        line-height: 25px;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 12px;
+        color: #ffffff;
+      }
+    }
+  }
+
+  @include mobile {
+    .first-batch-title .title {
+      padding-right: 0;
+      padding-left: 0;
+    }
+    .first-batch-content {
+      margin-top: 12px;
+    }
+  }
+}
+
+@keyframes sliderScrollRightToLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 13));
+  }
+}
