@@ -1,0 +1,100 @@
+@import "../../styles/rwd";
+
+.nft-explain {
+  min-height: 100vh;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background: url("../../assets/imgs/nftExplain/bg.jpeg") no-repeat center;
+  background-size: cover;
+  position: relative;
+}
+
+.nft-explain-container .nft-explain-content {
+  .left-side, .right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left-side {
+    z-index: 1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .right-side {
+    z-index: 1;
+
+    .content-container .desc {
+      font-size: 20px;
+      text-align: justify;
+      line-height: 30px;
+      color: #ffffff;
+    }
+
+    .faq-container {
+      margin-top: 24px;
+
+      .accordion-item {
+        &:not(:first-child) {
+          margin-top: 12px;
+        }
+
+        &:first-of-type {
+          border-top-left-radius: unset;
+          border-top-right-radius: unset;
+        }
+
+        &:last-of-type {
+          border-bottom-right-radius: unset;
+          border-bottom-left-radius: unset;
+        }
+      }
+
+      .accordion-button {
+        font-size: 20px;
+        font-weight: 600;
+
+        &:focus {
+          outline: none;
+          border-color: unset;
+          box-shadow: none;
+        }
+      }
+
+      .accordion-body p {
+        text-align: justify;
+        font-size: 18px;
+        line-height: 24px;
+
+        &:not(:first-child) {
+          margin-top: 12px;
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    .left-side, .right-side {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+    .right-side {
+      margin-top: 24px;
+    }
+  }
+  @include tablet {
+    .left-side img {
+      width: 80%;
+      height: unset;
+    }
+    .right-side {
+      margin-top: 24px;
+    }
+  }
+}
