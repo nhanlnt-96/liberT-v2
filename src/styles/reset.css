@@ -123,11 +123,6 @@ table {
   border-spacing: 0;
 }
 
-@font-face {
-  font-family: "coder";
-  src: local("coder"), url(font.woff) format("woff");
-}
-
 body {
   margin: 0;
   font-family: "coder", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
@@ -160,10 +155,10 @@ html {
   background-color: "#4C4C4C";
 }
 
-div {
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -o-user-select: none;
-}
+/*div {*/
+/*  -moz-user-select: none;*/
+/*  -webkit-user-select: none;*/
+/*  -ms-user-select: none;*/
+/*  user-select: none;*/
+/*  -o-user-select: none;*/
+/*}*/
