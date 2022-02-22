@@ -111,7 +111,7 @@ const MintBox = () => {
         jc={"center"}
         ai={"center"}
         style={{
-          backgroundColor: "var(--accent)",
+          backgroundColor: "rgba(0,0,0,.5)",
           padding: 24,
           borderRadius: 24,
           border: "4px dashed var(--secondary)",
@@ -195,15 +195,6 @@ const MintBox = () => {
                   Connect to the {CONFIG.NETWORK.NAME} network
                 </s.TextDescription>
                 <s.SpacerSmall/>
-                <StyledButton
-                  onClick={(e) => {
-                    e.preventDefault();
-                    dispatch(connect());
-                    getData();
-                  }}
-                >
-                  CONNECT
-                </StyledButton>
                 {blockchain.errorMsg !== "" ? (
                   <>
                     <s.SpacerSmall/>
