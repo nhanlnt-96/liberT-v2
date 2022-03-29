@@ -39,7 +39,7 @@ const BannerComp = () => {
                     e.preventDefault();
                     dispatch(connect());
                     getData();
-                  }}>Connect wallet
+                  }}>Get Yours Now
                   </button>
                 </div>
               )

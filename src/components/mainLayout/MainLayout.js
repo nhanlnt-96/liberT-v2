@@ -6,7 +6,7 @@ import FirstBatch from "../firstBatch/FirstBatch";
 
 const MainLayout = () => {
   return (
-    <Container fluid className="main-layout">
+    <Container fluid className="main-layout" style={{overflow: "hidden"}}>
       <Row id="home">
         <BannerComp/>
       </Row>
